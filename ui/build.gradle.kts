@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 plugins {
     id(Plugins.androidLibrary)
     id(Plugins.daggerHilt)
@@ -19,6 +21,7 @@ android {
 dependencies {
     implementation(libs.bundles.androidx)
 
+    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.bundles.androidx.compose)
 
     testImplementation(libs.bundles.test)
