@@ -1,5 +1,5 @@
 package com.template
 
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.ComponentActivity
 
-class MainActivity : AppCompatActivity()
+class MainActivity : ComponentActivity()
