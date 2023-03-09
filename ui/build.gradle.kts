@@ -1,8 +1,10 @@
-@file:Suppress("UnstableApiUsage")
-
 plugins {
     id(Plugins.androidCompose)
     id(Plugins.daggerHilt)
+}
+
+android {
+    namespace = "com.template.ui"
 }
 
 dependencies {
