@@ -14,6 +14,10 @@ gradlePlugin {
             id = "com.template.application"
             implementationClass = "plugins.AndroidApplicationPlugin"
         }
+        register("androidCompose") {
+            id = "com.template.compose"
+            implementationClass = "plugins.AndroidComposePlugin"
+        }
         register("androidLibrary") {
             id = "com.template.library"
             implementationClass = "plugins.AndroidLibraryPlugin"

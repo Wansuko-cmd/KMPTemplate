@@ -78,7 +78,6 @@ test = ["test-truth", "test-junit4", "test-turbine", "test-mockk", "test-kotlin-
 androidx = ["androidx-core", "androidx-lifecycle-runtime"]
 androidx-test = ["androidx-test-junit", "androidx-test-espresso"]
 androidx-compose = [
-    "androidx-compose-bom",
     "androidx-compose-ui",
     "androidx-compose-tooling",
     "androidx-compose-preview",
