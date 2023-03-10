@@ -22,3 +22,5 @@ rootProject.name = "Template"
 include(":app")
 include(":ui")
 include(":utils")
+
+include(":lib")
