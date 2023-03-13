@@ -36,6 +36,7 @@ android {
 
 dependencies {
     implementation(project(":ui"))
+    implementation(project(":utils"))
 
     implementation(libs.bundles.androidx)
     testImplementation(libs.bundles.test)
