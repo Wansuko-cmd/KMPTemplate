@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 仮想ブランチにチェックアウト
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: gradleのライブラリ群をキャッシュ
         uses: actions/cache@preview
