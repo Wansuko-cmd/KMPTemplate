@@ -1,6 +1,6 @@
 [versions]
 # Kotlin
-kotlin = "1.8.21"
+kotlin = "1.8.22"
 coroutine = "1.7.1"
 datetime = "0.4.0"
 
