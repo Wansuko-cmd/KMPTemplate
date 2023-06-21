@@ -1,4 +1,4 @@
-package com.wsr.result
+package com.template.result
 
 sealed class ApiResult<out T, out E> {
     data class Success<T>(val value: T) : ApiResult<T, Nothing>()

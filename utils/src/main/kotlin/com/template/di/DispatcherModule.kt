@@ -1,4 +1,4 @@
-package com.wsr.di
+package com.template.di
 
 import dagger.Module
 import dagger.Provides
