@@ -26,5 +26,9 @@ gradlePlugin {
             id = "com.template.dagger-hilt"
             implementationClass = "plugins.DaggerHiltPlugin"
         }
+        register("ktlint") {
+            id = "com.template.ktlint"
+            implementationClass = "plugins.KtlintPlugin"
+        }
     }
 }
