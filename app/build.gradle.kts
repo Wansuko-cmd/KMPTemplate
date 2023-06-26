@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId = "com.template"
         versionCode = 1
-        versionName = "1.0"
+        versionName = "0.01"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -39,5 +39,7 @@ dependencies {
     implementation(project(":utils"))
 
     implementation(libs.bundles.androidx)
+
     testImplementation(libs.bundles.test)
+    androidTestImplementation(libs.bundles.androidx.test)
 }
