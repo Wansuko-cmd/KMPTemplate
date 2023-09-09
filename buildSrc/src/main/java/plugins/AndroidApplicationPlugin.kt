@@ -15,7 +15,7 @@ class AndroidApplicationPlugin : Plugin<Project> {
 
             extensions.configure<ApplicationExtension> {
                 configureCommonAndroidSetting(this)
-
+                compileSdk = 34
                 buildTypes {
                     create("mock") {
                         signingConfig = signingConfigs.getByName("debug")
