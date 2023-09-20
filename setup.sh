@@ -12,7 +12,7 @@ PACKAGE_NAME="$2"
 TARGET=$(find . |
      grep 'com/template$' |
      grep -v 'build' |
-     xargs dirname | xargs dirname)
+     xargs -I{} dirname {} | xargs -I{} dirname {})
 PACKAGE_NAME_WITH_SLASH=${PACKAGE_NAME//.//}
 
 for DIR in $TARGET; do
@@ -26,15 +26,15 @@ for DIR in $TARGET; do
   fi
 done
 
-#############################
-# ファイル内に書かれたパッケージ名の置換
-#############################
+############################
+ ファイル内に書かれたパッケージ名の置換
+############################
 TARGET=$(find . -type f | grep -v 'build/' | grep -v '\/\.' | grep -v './setup.sh')
 
-for DIR in $TARGET; do
-  echo "$DIR"
-  sed -i -e "s/Template/$APP_NAME/g" "$DIR"
-  sed -i -e "s/com.template/$PACKAGE_NAME/g" "$DIR"
+for FILE in $TARGET; do
+  echo "$FILE"
+  sed -i -e "s/Template/$APP_NAME/g" "$FILE"
+  sed -i -e "s/com.template/$PACKAGE_NAME/g" "$FILE"
 done
 
 #############################
