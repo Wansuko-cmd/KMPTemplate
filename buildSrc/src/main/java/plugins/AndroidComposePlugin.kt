@@ -17,16 +17,16 @@ class AndroidComposePlugin : Plugin<Project> {
                 apply(Plugins.androidLibrary)
             }
 
+            val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             extensions.configure<LibraryExtension> {
                 buildFeatures {
                     compose = true
                 }
                 composeOptions {
-                    kotlinCompilerExtensionVersion = "1.4.7"
+                    kotlinCompilerExtensionVersion = libs.findVersion("androidx-compose-compiler").get().toString()
                 }
             }
 
-            val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
                 add("implementation", platform(libs.findLibrary("androidx.compose.bom").get()))
                 add("implementation", libs.findBundle("androidx.compose").get())
