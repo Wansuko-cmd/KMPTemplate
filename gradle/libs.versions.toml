@@ -25,9 +25,6 @@ androidx-compose-lifecycle = "2.7.0"
 androidx-compose-navigation = "2.7.7"
 androidx-compose-hilt-navigation = "1.2.0"
 
-# Hilt
-hilt = "2.51.1"
-
 # Gradle
 gradle-android = "8.3.1"
 
@@ -68,14 +65,9 @@ androidx-compose-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-
 androidx-compose-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-compose-test-uitooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 
-# Hilt
-hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
-
 # Gradle
 gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 gradle-android = { group = "com.android.tools.build", name = "gradle", version.ref = "gradle-android" }
-gradle-hilt = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "hilt" }
 
 [bundles]
 test = ["test-truth", "test-junit4", "test-turbine", "test-mockk", "test-kotlin-test"]
