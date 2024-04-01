@@ -1,6 +1,5 @@
 plugins {
-    id(Plugins.androidCompose)
-    id(Plugins.daggerHilt)
+    id(Plugins.androidComposeLibrary)
 }
 
 android {

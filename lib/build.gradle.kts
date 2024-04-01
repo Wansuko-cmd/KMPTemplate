@@ -1,14 +1,20 @@
 plugins {
-    id(Plugins.androidLibrary)
+    id(Plugins.kotlinMultiPlatform)
 }
 
 android {
     namespace = "com.template.lib"
 }
 
-dependencies {
-    implementation(project(":utils"))
+kotlin {
+    sourceSets {
+        val commonMain by getting {
+            dependencies {
+                implementation(project(":utils"))
 
-    implementation(libs.bundles.androidx)
-    testImplementation(libs.bundles.test)
+                implementation(libs.kotlin.coroutine)
+                implementation(libs.kotlin.datetime)
+            }
+        }
+    }
 }
