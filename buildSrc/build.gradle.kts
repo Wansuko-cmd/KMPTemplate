@@ -10,21 +10,17 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        register("androidApplication") {
-            id = "com.template.application"
-            implementationClass = "plugins.AndroidApplicationPlugin"
+        register("androidComposeApplication") {
+            id = "com.template.compose.application"
+            implementationClass = "plugins.AndroidComposeApplicationPlugin"
         }
-        register("androidCompose") {
-            id = "com.template.compose"
-            implementationClass = "plugins.AndroidComposePlugin"
+        register("androidComposeLibrary") {
+            id = "com.template.compose.library"
+            implementationClass = "plugins.AndroidComposeLibraryPlugin"
         }
-        register("androidLibrary") {
-            id = "com.template.library"
-            implementationClass = "plugins.AndroidLibraryPlugin"
-        }
-        register("daggerHilt") {
-            id = "com.template.dagger-hilt"
-            implementationClass = "plugins.DaggerHiltPlugin"
+        register("kotlinMultiPlatform") {
+            id = "com.template.multiplatform"
+            implementationClass = "plugins.KotlinMultiPlatformPlugin"
         }
         register("ktlint") {
             id = "com.template.ktlint"

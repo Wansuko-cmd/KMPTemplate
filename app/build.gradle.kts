@@ -1,12 +1,11 @@
 @file:Suppress("UnstableApiUsage")
 
 plugins {
-    id(Plugins.androidApplication)
-    id(Plugins.daggerHilt)
+    id(Plugins.androidComposeApplication)
 }
 
 android {
-    namespace = "com.template"
+    namespace = "com.template.app"
 
     defaultConfig {
         applicationId = "com.template"
