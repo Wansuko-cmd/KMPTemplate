@@ -20,11 +20,6 @@ class AndroidComposeLibraryPlugin : Plugin<Project> {
             extensions.configure<LibraryExtension> {
                 configureCommonAndroidSetting(this)
 
-                buildTypes {
-                    create("mock") {
-                        signingConfig = signingConfigs.getByName("debug")
-                    }
-                }
                 buildFeatures {
                     compose = true
                 }
