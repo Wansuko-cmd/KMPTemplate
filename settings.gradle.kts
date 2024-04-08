@@ -19,7 +19,8 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Template"
-include(":androidApp")
+include(":android:app")
+include(":android:ui")
 include(":ui")
 include(":utils")
 

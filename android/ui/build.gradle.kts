@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.template.ui"
+    namespace = "com.template.android.ui"
 }
 
 dependencies {
