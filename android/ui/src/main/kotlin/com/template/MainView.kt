@@ -7,6 +7,11 @@ import com.template.theme.TemplateTheme
 @Composable
 fun MainView() {
     TemplateTheme {
-        Text(text = "Hello World")
+        Test()
     }
+}
+
+@Composable
+fun Test() {
+    Text(text = "Hello World")
 }
