@@ -15,4 +15,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-private val list = (1..100).filter { it % 3 == 0 }
+private val list = (1..100)
+    .filter { it % 3 == 0 }
+    .joinToString { it.toString() }
