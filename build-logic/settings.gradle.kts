@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "buildSrc"
+rootProject.name = "build-logic"
