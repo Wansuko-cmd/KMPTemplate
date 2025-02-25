@@ -7,6 +7,9 @@ import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
+import plugins.ext.configureCommonAndroidSetting
+import plugins.ext.implementation
+import plugins.ext.testImplementation
 
 class AndroidComposeLibraryPlugin : Plugin<Project> {
     override fun apply(target: Project) {
@@ -26,9 +29,9 @@ class AndroidComposeLibraryPlugin : Plugin<Project> {
             }
 
             dependencies {
-                add("implementation", platform(libs.findLibrary("androidx.compose.bom").get()))
-                add("implementation", libs.findBundle("androidx.compose").get())
-                add("testImplementation", libs.findBundle("androidx.compose.test").get())
+                implementation(platform(libs.findLibrary("androidx.compose.bom").get()))
+                implementation(libs.findBundle("androidx.compose").get())
+                testImplementation(libs.findBundle("androidx.compose.test").get())
             }
         }
     }

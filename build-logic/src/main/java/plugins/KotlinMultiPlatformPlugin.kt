@@ -7,6 +7,7 @@ import org.gradle.api.Project
 import org.gradle.api.plugins.ExtensionAware
 import org.gradle.kotlin.dsl.configure
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
+import plugins.ext.configureCommonAndroidSetting
 
 class KotlinMultiPlatformPlugin : Plugin<Project> {
     override fun apply(target: Project) {

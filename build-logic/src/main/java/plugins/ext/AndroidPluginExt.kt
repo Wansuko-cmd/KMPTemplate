@@ -1,4 +1,4 @@
-package plugins
+package plugins.ext
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.JavaVersion
@@ -6,14 +6,12 @@ import org.gradle.api.Project
 import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-internal fun Project.configureCommonAndroidSetting(
-    commonExtension: CommonExtension<*, *, *, *, *, *>,
-) {
+fun Project.configureCommonAndroidSetting(commonExtension: CommonExtension<*, *, *, *, *, *>) {
     commonExtension.apply {
-        compileSdk = 35
+        compileSdk = projects.getVersion("android.compileSdk").toInt()
 
         defaultConfig {
-            minSdk = 26
+            minSdk = projects.getVersion("android.minSdk").toInt()
         }
 
         compileOptions {
