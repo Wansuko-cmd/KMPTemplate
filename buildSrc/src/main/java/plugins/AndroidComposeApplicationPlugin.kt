@@ -19,13 +19,10 @@ class AndroidComposeApplicationPlugin : Plugin<Project> {
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             extensions.configure<ApplicationExtension> {
                 configureCommonAndroidSetting(this)
-                compileSdk = 34
+                compileSdk = 35
                 buildFeatures {
                     compose = true
                 }
-//                composeOptions {
-//                    kotlinCompilerExtensionVersion = libs.findVersion("androidx-compose-compiler").get().toString()
-//                }
             }
 
             dependencies {

@@ -11,7 +11,7 @@ test-turbine = "1.2.0"
 test-mockk = "1.13.16"
 
 # AndroidX
-androidx = "1.13.1"
+androidx = "1.15.0"
 androidx-lifecycle-runtime = "2.8.7"
 
 # AndroidXTest
@@ -19,9 +19,9 @@ androidx-test-junit = "1.2.1"
 androidx-test-espresso = "3.6.1"
 
 # Compose
-androidx-compose-bom = "2024.12.01"
+androidx-compose-bom = "2025.02.00"
 androidx-compose-lifecycle = "2.8.7"
-androidx-compose-navigation = "2.8.2"
+androidx-compose-navigation = "2.8.7"
 androidx-compose-hilt-navigation = "1.2.0"
 
 # Gradle
