@@ -7,8 +7,10 @@ android-targetSdk = "35"
 [plugins]
 # Android
 # android-library = { id = "com.template.library", version = "unspecified" }
-# android-compose-application = { id = "com.template.compose.application", version = "unspecified" }
-# android-compose-library = { id = "com.template.compose.library", version = "unspecified" }
+android-compose-application = { id = "com.template.compose.application", version = "unspecified" }
+android-compose-library = { id = "com.template.compose.library", version = "unspecified" }
+kotlin-multiplatform = { id = "com.template.multiplatform", version = "unspecified" }
+
 
 # Ktlint
 ktlint = { id = "com.template.ktlint", version = "unspecified" }

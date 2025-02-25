@@ -1,5 +1,5 @@
 plugins {
-    id(Plugins.kotlinMultiPlatform)
+    alias(projects.plugins.kotlin.multiplatform)
 }
 
 android {

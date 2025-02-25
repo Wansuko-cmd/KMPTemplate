@@ -1,5 +1,5 @@
 plugins {
-    id(Plugins.androidComposeLibrary)
+    alias(projects.plugins.android.compose.library)
     alias(libs.plugins.compose.compiler)
 }
 

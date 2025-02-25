@@ -1,7 +1,7 @@
 @file:Suppress("UnstableApiUsage")
 
 plugins {
-    id(Plugins.androidComposeApplication)
+    alias(projects.plugins.android.compose.application)
     alias(libs.plugins.compose.compiler)
 }
 
