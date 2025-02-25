@@ -8,7 +8,10 @@ import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
 import plugins.ext.configureCommonAndroidSetting
+import plugins.ext.getBundle
+import plugins.ext.getLibrary
 import plugins.ext.implementation
+import plugins.ext.libs
 import plugins.ext.testImplementation
 
 class AndroidComposeApplicationPlugin : Plugin<Project> {
@@ -19,19 +22,17 @@ class AndroidComposeApplicationPlugin : Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
             }
 
-            val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             extensions.configure<ApplicationExtension> {
                 configureCommonAndroidSetting(this)
-                compileSdk = 35
                 buildFeatures {
                     compose = true
                 }
             }
 
             dependencies {
-                implementation(platform(libs.findLibrary("androidx.compose.bom").get()))
-                implementation(libs.findBundle("androidx.compose").get())
-                testImplementation(libs.findBundle("androidx.compose.test").get())
+                implementation(platform(libs.getLibrary("androidx.compose.bom")))
+                implementation(libs.getBundle("androidx.compose"))
+                testImplementation(libs.getBundle("androidx.compose.test"))
             }
         }
     }
