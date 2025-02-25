@@ -23,9 +23,9 @@ class AndroidComposeApplicationPlugin : Plugin<Project> {
                 buildFeatures {
                     compose = true
                 }
-                composeOptions {
-                    kotlinCompilerExtensionVersion = libs.findVersion("androidx-compose-compiler").get().toString()
-                }
+//                composeOptions {
+//                    kotlinCompilerExtensionVersion = libs.findVersion("androidx-compose-compiler").get().toString()
+//                }
             }
 
             dependencies {

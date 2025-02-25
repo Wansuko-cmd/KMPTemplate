@@ -2,6 +2,7 @@
 
 plugins {
     id(Plugins.androidComposeApplication)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
