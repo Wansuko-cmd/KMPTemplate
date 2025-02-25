@@ -21,5 +21,9 @@ gradlePlugin {
             id = "com.template.multiplatform"
             implementationClass = "plugins.KotlinMultiPlatformPlugin"
         }
+        register("ktlint") {
+            id = "com.template.ktlint"
+            implementationClass = "plugins.KtlintPlugin"
+        }
     }
 }

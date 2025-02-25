@@ -4,8 +4,5 @@ task<Delete>("clean") {
 
 plugins {
     alias(libs.plugins.compose.compiler) apply false
-}
-
-subprojects {
-    apply(plugin = Plugins.ktlint)
+    alias(projects.plugins.ktlint)
 }
