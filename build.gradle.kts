@@ -4,5 +4,11 @@ task<Delete>("clean") {
 
 plugins {
     alias(libs.plugins.compose.compiler) apply false
-    alias(projects.plugins.ktlint)
+}
+
+buildscript {
+    dependencies {
+        classpath(libs.gradle.kotlin)
+        classpath(libs.gradle.android)
+    }
 }
