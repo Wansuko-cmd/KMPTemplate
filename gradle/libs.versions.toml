@@ -21,7 +21,7 @@ androidx-test-espresso = "3.6.1"
 # Compose
 androidx-compose-bom = "2025.02.00"
 androidx-compose-lifecycle = "2.8.7"
-androidx-compose-navigation = "2.8.8"
+androidx-compose-navigation = "2.8.9"
 androidx-compose-hilt-navigation = "1.2.0"
 
 # Gradle
