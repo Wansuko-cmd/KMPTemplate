@@ -7,9 +7,11 @@ import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
+import plugins.ext.alias
 import plugins.ext.configureCommonAndroidSetting
 import plugins.ext.getBundle
 import plugins.ext.getLibrary
+import plugins.ext.getPlugin
 import plugins.ext.implementation
 import plugins.ext.libs
 import plugins.ext.testImplementation
@@ -18,8 +20,9 @@ class AndroidComposeLibraryPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
+                alias(libs.getPlugin("android.library"))
+                alias(libs.getPlugin("compose.compiler"))
             }
 
             extensions.configure<LibraryExtension> {

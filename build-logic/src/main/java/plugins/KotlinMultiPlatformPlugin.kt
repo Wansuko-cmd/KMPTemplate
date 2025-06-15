@@ -7,14 +7,17 @@ import org.gradle.api.Project
 import org.gradle.api.plugins.ExtensionAware
 import org.gradle.kotlin.dsl.configure
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
+import plugins.ext.alias
 import plugins.ext.configureCommonAndroidSetting
+import plugins.ext.getPlugin
+import plugins.ext.libs
 
 class KotlinMultiPlatformPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("org.jetbrains.kotlin.multiplatform")
-                apply("com.android.library")
+                alias(libs.getPlugin("kotlin"))
+                alias(libs.getPlugin("android.library"))
             }
 
             @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
