@@ -1,5 +1,5 @@
 plugins {
-    alias(projects.plugins.kotlin.multiplatform)
+    alias(buildLogic.plugins.kotlin.multiplatform)
 }
 
 android {

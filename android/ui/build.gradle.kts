@@ -1,5 +1,5 @@
 plugins {
-    alias(projects.plugins.android.compose.library)
+    alias(buildLogic.plugins.android.compose.library)
     alias(libs.plugins.compose.compiler)
 }
 

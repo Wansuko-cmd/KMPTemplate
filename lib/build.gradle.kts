@@ -1,5 +1,5 @@
 plugins {
-    alias(projects.plugins.kotlin.multiplatform)
+    alias(buildLogic.plugins.kotlin.multiplatform)
 }
 
 android {
@@ -10,7 +10,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(project(":utils"))
+                implementation(projects.utils)
 
                 implementation(libs.kotlin.coroutine)
                 implementation(libs.kotlin.datetime)

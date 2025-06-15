@@ -1,7 +1,7 @@
 @file:Suppress("UnstableApiUsage")
 
 plugins {
-    alias(projects.plugins.android.compose.application)
+    alias(buildLogic.plugins.android.compose.application)
     alias(libs.plugins.compose.compiler)
 }
 
@@ -35,8 +35,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":android:ui"))
-    implementation(project(":utils"))
+    implementation(projects.android.ui)
+    implementation(projects.utils)
 
     implementation(libs.bundles.androidx)
 

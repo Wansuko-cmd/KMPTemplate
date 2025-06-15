@@ -8,10 +8,10 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 fun Project.configureCommonAndroidSetting(commonExtension: CommonExtension<*, *, *, *, *, *>) {
     commonExtension.apply {
-        compileSdk = projects.getVersion("android.compileSdk").toInt()
+        compileSdk = buildLogic.getVersion("android.compileSdk").toInt()
 
         defaultConfig {
-            minSdk = projects.getVersion("android.minSdk").toInt()
+            minSdk = buildLogic.getVersion("android.minSdk").toInt()
         }
 
         compileOptions {
