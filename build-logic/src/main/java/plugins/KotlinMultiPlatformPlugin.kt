@@ -1,15 +1,14 @@
 package plugins
 
 import com.android.build.gradle.LibraryExtension
-import org.gradle.api.Action
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.plugins.ExtensionAware
 import org.gradle.kotlin.dsl.configure
-import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import plugins.ext.alias
 import plugins.ext.configureCommonAndroidSetting
 import plugins.ext.getPlugin
+import plugins.ext.kotlinMultiplatform
 import plugins.ext.libs
 
 class KotlinMultiPlatformPlugin : Plugin<Project> {
@@ -21,7 +20,7 @@ class KotlinMultiPlatformPlugin : Plugin<Project> {
             }
 
             @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
-            kotlin {
+            kotlinMultiplatform {
                 applyDefaultHierarchyTemplate()
 
                 androidTarget()
@@ -30,6 +29,12 @@ class KotlinMultiPlatformPlugin : Plugin<Project> {
 //                iosX64()
 //                iosArm64()
 //                iosSimulatorArm64()
+
+                jvm {
+                    compilerOptions {
+                        jvmTarget.set(JvmTarget.JVM_11)
+                    }
+                }
             }
 
             extensions.configure<LibraryExtension> {
@@ -39,5 +44,3 @@ class KotlinMultiPlatformPlugin : Plugin<Project> {
     }
 }
 
-private fun Project.kotlin(configure: Action<KotlinMultiplatformExtension>): Unit =
-    (this as ExtensionAware).extensions.configure("kotlin", configure)
