@@ -1,8 +1,11 @@
 package plugins
 
 import com.android.build.api.dsl.ApplicationExtension
+import io.github.takahirom.roborazzi.RoborazziExtension
+import org.gradle.api.Action
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.plugins.ExtensionAware
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -25,6 +28,7 @@ class AndroidComposeApplicationPlugin : Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
                 alias(libs.getPlugin("android.application"))
                 alias(libs.getPlugin("compose.compiler"))
+                alias(libs.getPlugin("roborazzi"))
 
                 alias(libs.getPlugin("ktlint"))
             }
@@ -37,19 +41,40 @@ class AndroidComposeApplicationPlugin : Plugin<Project> {
                 buildFeatures {
                     compose = true
                 }
+
+                kotlinAndroid {
+                    compilerOptions {
+                        jvmTarget.set(JvmTarget.JVM_11)
+                    }
+                }
+
+                testOptions {
+                    unitTests {
+                        isIncludeAndroidResources = true
+                        all {
+                            it.systemProperties["robolectric.pixelCopyRenderMode"] = "hardware"
+                        }
+                    }
+                }
             }
 
-            kotlinAndroid {
-                compilerOptions {
-                    jvmTarget.set(JvmTarget.JVM_11)
+            roborazzi {
+                generateComposePreviewRobolectricTests {
+                    enable.set(true)
+                    packages.set(listOf("com.template"))
+                    includePrivatePreviews.set(true)
                 }
             }
 
             dependencies {
                 implementation(platform(libs.getLibrary("androidx.compose.bom")))
                 implementation(libs.getBundle("androidx.compose"))
-                testImplementation(libs.getBundle("androidx.compose.test"))
+
+                testImplementation(libs.getBundle("vrt"))
             }
         }
     }
 }
+
+private fun Project.roborazzi(configure: Action<RoborazziExtension>): Unit =
+    (this as ExtensionAware).extensions.configure("roborazzi", configure)
