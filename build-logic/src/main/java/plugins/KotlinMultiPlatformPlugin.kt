@@ -17,6 +17,8 @@ class KotlinMultiPlatformPlugin : Plugin<Project> {
             with(pluginManager) {
                 alias(libs.getPlugin("kotlin"))
                 alias(libs.getPlugin("android.library"))
+
+                alias(libs.getPlugin("ktlint"))
             }
 
             @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
@@ -33,7 +35,6 @@ class KotlinMultiPlatformPlugin : Plugin<Project> {
 //                iosX64()
 //                iosArm64()
 //                iosSimulatorArm64()
-
             }
 
             extensions.configure<LibraryExtension> {
@@ -42,4 +43,3 @@ class KotlinMultiPlatformPlugin : Plugin<Project> {
         }
     }
 }
-

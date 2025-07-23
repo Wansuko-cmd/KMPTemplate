@@ -25,6 +25,8 @@ class AndroidComposeApplicationPlugin : Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
                 alias(libs.getPlugin("android.application"))
                 alias(libs.getPlugin("compose.compiler"))
+
+                alias(libs.getPlugin("ktlint"))
             }
 
             extensions.configure<ApplicationExtension> {
