@@ -23,18 +23,17 @@ class KotlinMultiPlatformPlugin : Plugin<Project> {
             kotlinMultiplatform {
                 applyDefaultHierarchyTemplate()
 
-                androidTarget()
+                androidTarget {
+                    compilerOptions {
+                        jvmTarget.set(JvmTarget.JVM_11)
+                    }
+                }
 
                 // iOSビルド用
 //                iosX64()
 //                iosArm64()
 //                iosSimulatorArm64()
 
-                jvm {
-                    compilerOptions {
-                        jvmTarget.set(JvmTarget.JVM_11)
-                    }
-                }
             }
 
             extensions.configure<LibraryExtension> {
