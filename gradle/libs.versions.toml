@@ -21,7 +21,7 @@ roborazzi = "1.53.0"
 composable-preview-scanner = "0.7.2"
 
 # Gradle
-gradle-android = "8.13.2"
+gradle-android = "9.1.1"
 
 # Ktlint
 ktlint = "14.0.1"
