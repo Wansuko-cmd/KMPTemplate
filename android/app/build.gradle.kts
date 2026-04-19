@@ -1,11 +1,14 @@
 @file:Suppress("UnstableApiUsage")
 
+import com.android.build.api.dsl.ApplicationExtension
+
+
 plugins {
     alias(buildLogic.plugins.android.compose.application)
     alias(libs.plugins.compose.compiler)
 }
 
-android {
+configure<ApplicationExtension> {
     namespace = "com.template.app"
 
     defaultConfig {

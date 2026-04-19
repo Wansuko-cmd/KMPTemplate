@@ -1,9 +1,11 @@
+import com.android.build.api.dsl.LibraryExtension
+
 plugins {
     alias(buildLogic.plugins.android.compose.library)
     alias(libs.plugins.compose.compiler)
 }
 
-android {
+configure<LibraryExtension> {
     namespace = "com.template.android.ui"
 }
 

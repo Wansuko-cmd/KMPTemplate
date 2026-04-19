@@ -5,7 +5,7 @@ coroutine = "1.10.2"
 datetime = "0.7.1-0.6.x-compat"
 
 # AndroidX
-androidx = "1.16.0"
+androidx = "1.18.0"
 androidx-lifecycle-runtime = "2.10.0"
 
 # Compose
@@ -21,7 +21,7 @@ roborazzi = "1.59.0"
 composable-preview-scanner = "0.8.2"
 
 # Gradle
-gradle-android = "8.13.2"
+gradle-android = "9.1.1"
 
 # Ktlint
 ktlint = "14.2.0"
