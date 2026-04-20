@@ -2,10 +2,8 @@
 
 import com.android.build.api.dsl.ApplicationExtension
 
-
 plugins {
     alias(buildLogic.plugins.android.compose.application)
-    alias(libs.plugins.compose.compiler)
 }
 
 configure<ApplicationExtension> {
@@ -24,11 +22,11 @@ configure<ApplicationExtension> {
     }
 
     buildTypes {
-//        release {
-//            isMinifyEnabled = true
-//            proguardFiles.add(getDefaultProguardFile("proguard-android-optimize.txt"))
-//            proguardFiles.add(file("proguard-rules.pro"))
-//        }
+        release {
+            isMinifyEnabled = true
+            proguardFiles.add(getDefaultProguardFile("proguard-android-optimize.txt"))
+            proguardFiles.add(file("proguard-rules.pro"))
+        }
     }
     packaging {
         resources {
