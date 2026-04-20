@@ -39,7 +39,6 @@ configure<ApplicationExtension> {
 
 dependencies {
     implementation(projects.android.ui)
-    implementation(projects.utils)
 
     implementation(libs.bundles.androidx)
 }
