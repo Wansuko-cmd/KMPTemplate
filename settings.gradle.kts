@@ -27,6 +27,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Template"
 include(":android:app")
-include(":android:ui")
 
 include(":shared:lib")
+include(":shared:ui")

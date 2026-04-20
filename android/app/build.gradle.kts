@@ -24,11 +24,11 @@ configure<ApplicationExtension> {
     }
 
     buildTypes {
-        release {
-            isMinifyEnabled = true
-            proguardFiles.add(getDefaultProguardFile("proguard-android-optimize.txt"))
-            proguardFiles.add(file("proguard-rules.pro"))
-        }
+//        release {
+//            isMinifyEnabled = true
+//            proguardFiles.add(getDefaultProguardFile("proguard-android-optimize.txt"))
+//            proguardFiles.add(file("proguard-rules.pro"))
+//        }
     }
     packaging {
         resources {
@@ -38,7 +38,7 @@ configure<ApplicationExtension> {
 }
 
 dependencies {
-    implementation(projects.android.ui)
+    implementation(projects.shared.ui)
 
     implementation(libs.bundles.androidx)
 }
