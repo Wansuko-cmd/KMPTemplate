@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.template.lib"
+    namespace = "com.template.shared.lib"
 }
 
 kotlin {
