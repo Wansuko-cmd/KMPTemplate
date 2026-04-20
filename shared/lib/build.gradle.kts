@@ -2,11 +2,11 @@ plugins {
     alias(buildLogic.plugins.kotlin.multiplatform)
 }
 
-android {
-    namespace = "com.template.shared.lib"
-}
-
 kotlin {
+    android {
+        namespace = "com.template.shared.lib"
+    }
+
     sourceSets {
         val commonMain by getting {
             dependencies {

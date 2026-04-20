@@ -10,6 +10,8 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                implementation(projects.shared.lib)
+
                 implementation(libs.kotlin.coroutine)
                 implementation(libs.kotlin.datetime)
 

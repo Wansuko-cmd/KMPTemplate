@@ -1,5 +1,3 @@
-@file:Suppress("UnstableApiUsage")
-
 import com.android.build.api.dsl.ApplicationExtension
 
 plugins {
@@ -7,7 +5,7 @@ plugins {
 }
 
 configure<ApplicationExtension> {
-    namespace = "com.template.app"
+    namespace = "com.template.android.app"
 
     defaultConfig {
         applicationId = "com.template"

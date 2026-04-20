@@ -12,9 +12,9 @@ androidx-lifecycle-runtime = "2.10.0"
 androidx-compose-bom = "2026.03.01"
 androidx-compose-lifecycle = "2.10.0"
 androidx-compose-navigation = "2.9.7"
-androidx-compose-hilt-navigation = "1.3.0"
 
 compose-multiplatform = "1.10.3"
+compose-navigation = "2.9.2"
 compose-material3 = "1.11.0-alpha06"
 
 # VRT
@@ -41,21 +41,19 @@ androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-r
 # Compose
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidx-compose-bom" }
 androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
-androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
-androidx-compose-icons-core = { group = "androidx.compose.material", name = "material-icons-core" }
 androidx-compose-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-compose-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-compose-lifecycle" }
 androidx-compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidx-compose-navigation" }
-androidx-compose-hilt = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidx-compose-hilt-navigation" }
 
-compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-multiplatform" }
-compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-multiplatform" }
-compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-multiplatform" }
-compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose-multiplatform" }
-compose-ui-tooling-preview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "compose-multiplatform" }
-compose-ui-tooling = { module = "org.jetbrains.compose.ui:ui-tooling", version.ref = "compose-multiplatform" }
-compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-material3" }
+compose-runtime = { group = "org.jetbrains.compose.runtime", name = "runtime", version.ref = "compose-multiplatform" }
+compose-foundation = { group = "org.jetbrains.compose.foundation", name = "foundation", version.ref = "compose-multiplatform" }
+compose-ui = { group = "org.jetbrains.compose.ui", name = "ui", version.ref = "compose-multiplatform" }
+compose-components-resources = { group = "org.jetbrains.compose.components", name = "components-resources", version.ref = "compose-multiplatform" }
+compose-ui-tooling-preview = { group = "org.jetbrains.compose.ui", name = "ui-tooling-preview", version.ref = "compose-multiplatform" }
+compose-ui-tooling = { group = "org.jetbrains.compose.ui", name = "ui-tooling", version.ref = "compose-multiplatform" }
+compose-navigation = { group = "org.jetbrains.androidx.navigation", name = "navigation-compose", version.ref = "compose-navigation" }
+compose-material3 = { group = "org.jetbrains.compose.material3", name = "material3", version.ref = "compose-material3" }
 
 # VRT
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -76,13 +74,10 @@ gradle-roborazzi = { group = "io.github.takahirom.roborazzi", name = "roborazzi-
 androidx = ["androidx-core", "androidx-lifecycle-runtime"]
 androidx-compose = [
     "androidx-compose-ui",
-    "androidx-compose-material3",
-    "androidx-compose-icons-core",
     "androidx-compose-tooling",
     "androidx-compose-preview",
     "androidx-compose-lifecycle",
     "androidx-compose-navigation",
-    "androidx-compose-hilt",
 ]
 compose = [
     "compose-runtime",
@@ -91,6 +86,7 @@ compose = [
     "compose-components-resources",
     "compose-ui-tooling-preview",
     "compose-ui-tooling",
+    "compose-navigation",
     "compose-material3",
 ]
 vrt = [
@@ -113,6 +109,5 @@ ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 android-application = { id = "com.android.application", version.ref = "gradle-android" }
 android-library = { id = "com.android.library", version.ref = "gradle-android" }
 android-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "gradle-android" }
-compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 roborazzi = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }

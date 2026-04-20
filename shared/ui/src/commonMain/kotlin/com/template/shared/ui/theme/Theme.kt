@@ -1,4 +1,4 @@
-package com.template.theme
+package com.template.shared.ui.theme
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
