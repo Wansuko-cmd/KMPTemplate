@@ -8,4 +8,5 @@ android-targetSdk = "37"
 # Android
 android-compose-application = { id = "com.template.compose.application", version = "unspecified" }
 android-compose-library = { id = "com.template.compose.library", version = "unspecified" }
-kotlin-multiplatform = { id = "com.template.multiplatform", version = "unspecified" }
+compose-multiplatform = { id = "com.template.compose.multiplatform", version = "unspecified" }
+kotlin-multiplatform = { id = "com.template.kotlin.multiplatform", version = "unspecified" }
