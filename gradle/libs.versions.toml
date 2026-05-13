@@ -13,7 +13,7 @@ androidx-compose-bom = "2026.05.00"
 androidx-compose-lifecycle = "2.10.0"
 androidx-compose-navigation = "2.9.8"
 
-compose-multiplatform = "1.10.3"
+compose-multiplatform = "1.11.0"
 compose-navigation = "2.9.2"
 compose-material3 = "1.11.0-alpha07"
 
