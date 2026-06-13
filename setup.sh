@@ -33,8 +33,9 @@ TARGET=$(find . -type f | grep -v 'build/' | grep -v '\/\.' | grep -v './setup.s
 
 for FILE in $TARGET; do
   echo "$FILE"
-  sed -i "" "s/KotlinTemplate/$APP_NAME/g" "$FILE"
-  sed -i "" "s/com.template/$PACKAGE_NAME/g" "$FILE"
+  sed -i "s/KotlinTemplate/$APP_NAME/g" "$FILE"
+  sed -i "s/Template/$APP_NAME/g" "$FILE"
+  sed -i "s/com\.template/$PACKAGE_NAME/g" "$FILE"
 done
 
 #############################
