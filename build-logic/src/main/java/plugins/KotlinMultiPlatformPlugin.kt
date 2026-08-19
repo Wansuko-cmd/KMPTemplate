@@ -29,6 +29,8 @@ class KotlinMultiPlatformPlugin : Plugin<Project> {
                     .configureEach {
                         compileSdk = buildLogic.getVersion("android.compileSdk").toInt()
                         minSdk = buildLogic.getVersion("android.minSdk").toInt()
+
+                        withHostTestBuilder {}.configure {}
                     }
 
                 // iOSビルド用

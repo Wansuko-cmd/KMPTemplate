@@ -8,15 +8,13 @@ kotlin {
     }
 
     sourceSets {
-        val commonMain by getting {
-            dependencies {
-                implementation(projects.shared.lib)
+        commonMain.dependencies {
+            implementation(projects.shared.lib)
 
-                implementation(libs.kotlin.coroutine)
-                implementation(libs.kotlin.datetime)
+            implementation(libs.kotlin.coroutine)
+            implementation(libs.kotlin.datetime)
 
-                implementation(libs.bundles.compose)
-            }
+            implementation(libs.bundles.compose)
         }
     }
 }
