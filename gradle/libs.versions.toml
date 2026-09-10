@@ -19,7 +19,7 @@ compose-material3 = "1.11.0-alpha07"
 
 # VRT
 junit = "4.13.2"
-robolectric = "4.16.1"
+robolectric = "4.17"
 roborazzi = "1.72.0"
 composable-preview-scanner = "0.9.3"
 
